@@ -1,0 +1,57 @@
+<html lang="ru" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+</head>
+<body>
+<div class="mt-0 mb-auto mx-auto col-12 col-lg-2 bg-light sidebar" th:fragment="nav">
+
+    <div class="d-lg-none d-block btn btn-light py-0" data-toggle="collapse" data-target=".collapse.dont-collapse-lg">
+        ...
+    </div>
+
+    <div class="collapse dont-collapse-lg">
+        <div class="bg-light">
+
+            <div class="d-block">
+                <a class="col-12 btn" th:classappend="${module == 'main' ? 'btn-primary' :'btn-light'}"
+                   th:href="@{/zdu}">
+                    Головна           </a>
+            </div>
+
+            <div class="d-block">
+                <a class="col-12 btn" th:classappend="${module == 'lessons' ? 'btn-primary' :'btn-light'}"
+                   th:href="@{/zdu/lesson_list}">
+                    Навчальні матеріали            </a>
+            </div>
+
+            <div class="d-block" th:if="${role == 'admin'}">
+                <a class="col-12 btn" th:classappend="${module == 'pupil_list' ? 'btn-primary' :'btn-light'}"
+                   th:href="@{/zdu/admin/pupil_list}">
+                    Успішність учнів            </a>
+            </div>
+
+            <div class="d-block" th:if="${role == 'admin'}">
+                <a class="col-12 btn" th:classappend="${module == 'test_manager' ? 'btn-primary' :'btn-light'}"
+                   th:href="@{/zdu/admin/test_manager}">
+                    Створити тестування           </a>
+            </div>
+
+            <div class="d-block" th:if="${role == 'user'}">
+                <a class="col-12 btn" th:classappend="${module == 'mark_list' ? 'btn-primary' :'btn-light'}"
+                   th:href="@{/zdu/user/mark_list}">
+                    Поточна успішність            </a>
+            </div>
+
+            <div class="d-block" th:if="${role == 'user'}">
+                <a class="col-12 btn" th:classappend="${module == 'test' ? 'btn-primary' :'btn-light'}"
+                   th:href="@{/zdu/user/test}">
+                    Тестування            </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

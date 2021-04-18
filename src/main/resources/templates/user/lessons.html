@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf8"/>
+    <meta name="robots" content="none"/>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <meta name="viewport" content="width=device-width">
+    <title>Теми занять</title>
+
+</head>
+<body class="text-monospace shadow">
+<header th:replace="fragments/header"></header>
+
+<div class="container-fluid content">
+
+
+    <div class="row bg-light pb-3">
+        <div class="col-12">
+
+            <div class="row py-0 bg-light">
+
+                <div th:replace="fragments/nav"></div>
+
+
+                <div class="col-12 col-lg-10 pb-1">
+                    <div class="shadow-sm bg-white px-2 pb-2">
+                        <div class="container py-1 px-1">
+
+                            <h3>Тема: Бази даних</h3>
+                            <div class="form-group row px-1 pt-2">
+                                <button type="button" class="btn btn-primary btn-block" data-toggle="collapse"
+                                        data-target="#les_11">Урок №11 Створення структури таблиць і введення вмісту
+                                </button>
+                                <div id="les_11" class="collapse">
+                                    <div class="">
+                                        <table class="table">
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>
+                                                    <a th:href="@{/pz/pz1.docx}" class="text-dark" target="_blank">
+                                                        Практичне завдання
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>
+                                                    <a href="https://www.postgresql.org/docs/current/"
+                                                       class="text-dark">
+                                                        Довідковий матеріал
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>
+                                                    <a href="https://www.postgresql.org/docs/current/"
+                                                       class="text-dark">
+                                                        Онлайн сервіс для виконання завдання
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group row px-1 pt-2">
+                                <button type="button" class="btn btn-primary btn-block" data-toggle="collapse"
+                                        data-target="#les_12">Урок №12 Пошук, сортування і фільтрація даних у таблицях
+                                </button>
+                                <div id="les_12" class="collapse">
+                                    <div class="">
+                                        <table class="table">
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>
+                                                    <a th:href="@{/pz/pz2.docx}" class="text-dark" target="_blank">
+                                                        Практичне завдання
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>
+                                                    <a href="https://www.postgresql.org/docs/current/"
+                                                       class="text-dark">
+                                                        Довідковий матеріал
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>
+                                                    <a href="https://www.postgresql.org/docs/current/"
+                                                       class="text-dark">
+                                                        Онлайн сервіс для виконання завдання
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group row px-1 pt-2">
+                                <button type="button" class="btn btn-primary btn-block" data-toggle="collapse"
+                                        data-target="#les_35">Урок №35 Підведення підсумків
+                                </button>
+                                <div id="les_35" class="collapse">
+                                    <div class="">
+                                        <table class="table">
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>
+                                                    <a href="https://forms.gle/P8gmBBgUsx3zcSaN9" class="text-dark" >
+                                                        Тестування
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>
+                                                    <a href="https://www.postgresql.org/docs/current/"
+                                                       class="text-dark">
+                                                        Довідковий матеріал
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:replace="fragments/footer"></footer>
+
+
+</body>
+</html>

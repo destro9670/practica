@@ -1,0 +1,29 @@
+<html lang="ua" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+</head>
+<body>
+
+<header th:fragment="header">
+    <nav class="navbar navbar-expand navbar-light bg-light py-0">
+        <a class="navbar-brand" href="/">Кабінет інформатики</a>
+
+        <ul class="navbar-nav ml-auto" >
+            <li class="nav-item px-3"th:switch="${isLogined}">
+                <a class="nav-link" th:case="'false'" th:href="@{/singup}">Реєстрація</a>
+            </li>
+
+            <li class="nav-item px-3" th:switch="${isLogined}">
+                <a class="nav-link" th:case="'false'" th:href="@{/login}">Увійти</a>
+                <a class="nav-link" th:case="'true'" th:href="@{/logout}">Вийти</a>
+            </li>
+        </ul>
+
+    </nav>
+</header>
+
+
+</body>
+</html>

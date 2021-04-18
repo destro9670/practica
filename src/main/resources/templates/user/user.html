@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf8"/>
+    <meta name="robots" content="none"/>
+    <meta name="viewport" content="width=device-width">
+    <title>Головна</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body class="text-monospace shadow">
+<header th:replace="fragments/header"></header>
+
+<div class="container-fluid content">
+
+
+    <div class="row bg-light pb-3">
+        <div class="col-12">
+
+            <div class="row py-0 bg-light">
+
+                <div th:replace="fragments/nav"></div>
+
+
+                <div class="col-12 col-lg-10 pb-1">
+                    <div class="shadow-sm bg-white px-2 pb-2">
+                            <div class="container py-1 px-1 text-center">
+
+                                    <img th:src="@{/img/main_ico.jpg}" class="rounded"
+                                         style="margin-right: auto; margin-left: auto;">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br>На сторінках даного сайту учні зможуть повторювати та вивчати матеріали з предмету
+                                інформатика
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<footer th:replace="fragments/footer"></footer>
+
+
+</body>
+</html>

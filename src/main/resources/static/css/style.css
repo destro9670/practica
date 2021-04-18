@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 400px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    color: #626262;
+    word-break: break-word;
+}
+
+header {
+    word-break: normal;
+}
+
+thead {
+    word-break: normal;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header .navbar-brand {
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.sidebar .btn {
+    border-radius: 0px !important;
+}
+
+.device-list .list-group-item {
+    border-radius: 0px !important;
+}
+
+
+@media (min-width: 992px) {
+    .collapse.dont-collapse-lg {
+        display: block;
+        height: auto !important;
+        visibility: visible;
+    }
+}
+
+.mark-list {
+    width: max-content;
+    height: min-content;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf8"/>
+    <meta name="robots" content="none"/>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <meta name="viewport" content="width=device-width">
+    <title>Створення тестів</title>
+
+</head>
+<body class="text-monospace shadow">
+<header th:replace="fragments/header"></header>
+
+<div class="container-fluid content">
+
+
+    <div class="row bg-light pb-3">
+        <div class="col-12">
+
+            <div class="row py-0 bg-light">
+
+                <div th:replace="fragments/nav"></div>
+
+
+                <div class="col-12 col-lg-10 pb-1">
+                    <div class="shadow-sm bg-white px-2 pb-2">
+                        <div class="container col-12 col-sm-11 col-md-9 col-lg-8 col-xl-6 my-2">
+
+                            <h1 class="text-center py-2 text-info">Форма створення опитувань</h1>
+
+                            <form th:action="@{/zdu/admin/test_manager}" method="post">
+
+                                <div class="form-group py-2 row">
+                                    <input name="testName" type="text" class="form-control" placeholder="Тема тестування" th:value="${lastTheme}">
+                                </div>
+
+                                <div th:remove="tag" th:utext="${full}">
+                                </div>
+
+                                <div class="form-group pt-3 row">
+                                    <textarea name="question" type="password" class="form-control" placeholder="Запитання"></textarea>
+                                </div>
+
+                                <div class="form-group pt-3 row">
+                                    <textarea name="answer1" type="password" class="form-control col-6" placeholder="Варіант відповіді"></textarea>
+
+                                    <div class="custom-control custom-checkbox pt-3 col-auto offset-sm-1">
+                                        <input type="checkbox" class="custom-control-input" id="ans1IsTrue"
+                                               name="ans1IsTrue">
+                                        <label class="custom-control-label" for="ans1IsTrue">Відповідь вірна</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group py-2 row">
+                                    <textarea name="answer2" type="password" class="form-control col-6" placeholder="Варіант відповіді"></textarea>
+                                    <div class="custom-control custom-checkbox col-auto offset-sm-1">
+                                        <input type="checkbox" class="custom-control-input " id="ans2IsTrue"
+                                               name="ans2IsTrue" >
+                                        <label class="custom-control-label" for="ans2IsTrue">Відповідь вірна</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group py-2 row">
+                                    <textarea name="answer3" type="password" class="form-control col-6" placeholder="Варіант відповіді"></textarea>
+
+                                    <div class="custom-control custom-checkbox col-auto offset-sm-1">
+                                        <input type="checkbox" class="custom-control-input" id="ans3IsTrue"
+                                               name="ans3IsTrue" >
+                                        <label class="custom-control-label" for="ans3IsTrue">Відповідь вірна</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group py-2 row">
+                                    <textarea name="answer4" type="password" class="form-control col-6" placeholder="Варіант відповіді"></textarea>
+
+                                    <div class="custom-control custom-checkbox col-auto offset-sm-1">
+                                        <input type="checkbox" class="custom-control-input" id="ans4IsTrue"
+                                               name="ans3IsTrue" >
+                                        <label class="custom-control-label" for="ans4IsTrue">Відповідь вірна</label>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn col-12 btn-primary">Підтвердити</button>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:replace="fragments/footer"></footer>
+
+
+</body>
+</html>

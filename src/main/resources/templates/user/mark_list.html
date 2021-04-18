@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf8"/>
+    <meta name="robots" content="none"/>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <meta name="viewport" content="width=device-width">
+    <title>Оцінки</title>
+
+</head>
+<body class="text-monospace shadow">
+<header th:replace="fragments/header"></header>
+
+<div class="container-fluid content">
+
+
+    <div class="row bg-light pb-3">
+        <div class="col-12">
+
+            <div class="row py-0 bg-light">
+
+                <div th:replace="fragments/nav"></div>
+
+                <div class="col-12 col-lg-10 pb-1">
+                    <div class="shadow-sm bg-white px-2 pb-2">
+                        <div class="container py-1 px-1 table-responsive">
+                            <table class="table mark-list overflow-auto" th:if="${no_marks == false}">
+                                <tbody >
+                                <tr>
+                                    <td scope="row">Дата уроку</td>
+                                    <td th:each="m : ${marks}" th:text="${m.getReceipt().getDate()}"></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Оцінка</td>
+                                    <td th:each="m : ${marks}" th:text="${m.getCount()}"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <h2 th:if="${no_marks == true}"> На даний момент у тебе немає оцінок</h2>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer th:replace="fragments/footer"></footer>
+
+
+</body>
+</html>
